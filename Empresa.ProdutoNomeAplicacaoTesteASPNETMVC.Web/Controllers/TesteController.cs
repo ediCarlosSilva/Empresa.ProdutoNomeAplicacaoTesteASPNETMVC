@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Empresa.ProdutoNomeAplicacaoTesteASPNETMVC.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,13 +12,13 @@ namespace Empresa.ProdutoNomeAplicacaoTesteASPNETMVC.Web.Controllers
         // GET: Teste
         public ActionResult Index()
         {
-            return View();
+            return View(new Pessoa());
         }
 
         [HttpPost]
-        public ActionResult Index(string nome)
+        public ActionResult Index(Pessoa pessoa)
         {
-            ViewBag.Mensagem = nome;
+            ViewBag.PessoaInformada = pessoa;
             return View("Saudacao");
         }
     }
