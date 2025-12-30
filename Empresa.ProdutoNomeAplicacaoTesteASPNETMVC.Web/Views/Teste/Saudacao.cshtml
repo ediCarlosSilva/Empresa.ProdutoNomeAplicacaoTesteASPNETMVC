@@ -1,8 +1,12 @@
-﻿
+﻿@using Empresa.ProdutoNomeAplicacaoTesteASPNETMVC.Web.Models;
+@model Pessoa
+
 @{
     ViewBag.Title = "Saudacao";
 }
 
 <h2>Saudacao</h2>
 
-<p>Olá, seja bem vindo @ViewBag.PessoaInformada.Nome</p>
+<p>Olá, seja bem vindo @Model.Nome</p>
+@Html.Label("Idade: ") @Html.EditorFor(p => p.Idade)
+@Html.Label("Endereço: ") @Html.EditorFor(p => p.Endereco)

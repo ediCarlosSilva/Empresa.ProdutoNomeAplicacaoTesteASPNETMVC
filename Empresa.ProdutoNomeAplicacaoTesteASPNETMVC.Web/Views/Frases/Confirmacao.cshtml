@@ -1,4 +1,6 @@
-﻿
+﻿@using Empresa.ProdutoNomeAplicacaoTesteASPNETMVC.Web.Models
+@model Frase 
+
 @{
     ViewBag.Title = "Confirmacao";
 }
@@ -7,4 +9,7 @@
 
 <p>Frase inserida com sucesso:</p>
 
-<p>@ViewBag.FraseInformada.Descricao</p>
+<p>@Model.Descricao</p>
+
+@Html.Label("Categoria: ") @Html.EditorFor(f => f.Categoria)
+@Html.Label("Likes: ") @Html.EditorFor(f => f.Likes)

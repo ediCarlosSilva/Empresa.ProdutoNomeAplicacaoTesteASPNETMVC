@@ -18,8 +18,7 @@ namespace Empresa.ProdutoNomeAplicacaoTesteASPNETMVC.Web.Controllers
         [HttpPost]
         public ActionResult Index(Frase frase)
         {
-            ViewBag.FraseInformada = frase;
-            return View("Confirmacao");
+            return View("Confirmacao", frase);
         }
     }
 }
