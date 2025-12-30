@@ -15,9 +15,8 @@ namespace Empresa.ProdutoNomeAplicacaoTesteASPNETMVC.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(FormCollection formCollection)
+        public ActionResult Index(string nome)
         {
-            string nome = formCollection["nome"];
             ViewBag.Mensagem = nome;
             return View("Saudacao");
         }
