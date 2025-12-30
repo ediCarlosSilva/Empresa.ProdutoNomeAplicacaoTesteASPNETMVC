@@ -10,7 +10,7 @@
 <p>Digite a Frase:</p>
 @using(Html.BeginForm("Index", "Frases", FormMethod.Post))
 {
-    <input type="text" id="txbFrase" name="frase" />
+    @Html.TextBox("frase", null, new {id = "txbFrase"})
 
     <input type="submit" value="Enviar" />
 }
