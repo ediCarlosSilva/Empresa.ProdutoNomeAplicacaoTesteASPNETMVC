@@ -15,9 +15,8 @@ namespace Empresa.ProdutoNomeAplicacaoTesteASPNETMVC.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(FormCollection formCollection)
+        public ActionResult Index(string frase)
         {
-            string frase = formCollection["frase"];
             ViewBag.Frase = frase;
             return View("Confirmacao");
         }
