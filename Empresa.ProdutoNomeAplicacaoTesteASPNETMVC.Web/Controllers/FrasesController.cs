@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace Empresa.ProdutoNomeAplicacaoTesteASPNETMVC.Web.Controllers
 {
-    public class TesteController : Controller
+    public class FrasesController : Controller
     {
-        // GET: Teste
+        // GET: Frases
         public ActionResult Index()
         {
             return View();
@@ -17,9 +17,9 @@ namespace Empresa.ProdutoNomeAplicacaoTesteASPNETMVC.Web.Controllers
         [HttpPost]
         public ActionResult Index(FormCollection formCollection)
         {
-            string nome = formCollection["nome"];
-            ViewBag.Mensagem = nome;
-            return View("Saudacao");
+            string frase = formCollection["frase"];
+            ViewBag.Frase = frase;
+            return View("Confirmacao");
         }
     }
 }

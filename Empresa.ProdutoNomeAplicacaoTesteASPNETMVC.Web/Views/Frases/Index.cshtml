@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<h2>Frases</h2>
+<br />
+<br />
+<p>Digite a Frase:</p>
+@using(Html.BeginForm("Index", "Frases", FormMethod.Post))
+{
+    <input type="text" id="txbFrase" name="frase" />
+
+    <input type="submit" value="Enviar" />
+}
