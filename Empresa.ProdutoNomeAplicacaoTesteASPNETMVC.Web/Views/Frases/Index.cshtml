@@ -4,19 +4,23 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 <h2>Frases</h2>
 <br />
 <br />
 <p>Digite a Frase:</p>
 @using(Html.BeginForm("Index", "Frases", FormMethod.Post))
 {
+    @Html.ValidationSummary(true)
+
     @Html.LabelFor(f => f.Descricao)
     @Html.TextBoxFor(f => f.Descricao, new {id = "txbFrase"})
+    @Html.ValidationMessageFor(f => f.Descricao)
     <br /> <br />
 
     @Html.LabelFor(f => f.Categoria)
     @Html.TextBoxFor(f => f.Categoria)
+    @Html.ValidationMessageFor(f => f.Categoria)
+    <br /><br />
 
     @Html.LabelFor(f => f.Likes)
     @Html.TextBoxFor(f => f.Likes)
